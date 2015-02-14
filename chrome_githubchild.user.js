@@ -106,7 +106,7 @@ function get_data(){
 //scrape commit id
 var current_id =$("SPAN.sha.js-selectable-text")[0].innerHTML;
 //scrape usr/repo path
-var repo_path = $(".js-current-repository.js-repo-home-link")[0].pathname;
+var repo_path = $(".js-current-repository")[0].pathname;
 //if you navigate to a new repo, clear localstorage and grab commit history from api
 if (repo_path != localStorage.getItem("repo_path")){
   localStorage.clear()
